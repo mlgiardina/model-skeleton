@@ -26,3 +26,6 @@ This folder structure should be suitable for starting a project that uses a data
 └── lib                 # Your ruby code (models, etc.) should go here
     └── all.rb          # Require this file to auto-require _all_ `.rb` files in `lib`
 ```
+
+1. There are 51 users. I found this by typing `User.count`.
+2.  
