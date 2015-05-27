@@ -28,4 +28,22 @@ This folder structure should be suitable for starting a project that uses a data
 ```
 
 1. There are 51 users. I found this by typing `User.count`.
-2.  
+2.  The 5 most expensive items are:
+
+	|          Item         | Price |
+	|:---------------------:|:-----:|
+	|  Small Cotton Gloves  |  9984 |
+	| Small Wooden Computer |  9859 |
+	| Awesome Granite Pants |  9790 |
+	|    Sleek Wooden Hat   |  9390 |
+	|  Ergonomic Steel Car  |  9341 |
+I found this information by typing `Item.order('price').last(5)`.
+3. The cheapest book is called Ergonomic Granite Chair (1496). I found this by typing 
+
+```
+Item.order('price')
+	.where('category LIKE ?', '%book%')
+	.first
+```
+4. Corinne Little lives at "6439 Zetta Hills, Willmouth, WY." I found this by first typing `Address.find_by street: "6439 Zetta Hills"`. This showed me that the `user_id` was 40. Then I typed `User.where(user_id: 40)`, which showed me that she also lives at "54369 Wolff Forges, Lake Byron, CA 31587.
+5. 
